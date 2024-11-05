@@ -74,6 +74,7 @@
     "directory": "package"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ]
 }
