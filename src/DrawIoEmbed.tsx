@@ -21,6 +21,7 @@ export const DrawIoEmbed = forwardRef<DrawIoEmbedRef, DrawIoEmbedProps>(
       xml,
       csv,
       exportFormat,
+      exportOptions,
       onAutoSave,
       onSave,
       onClose,
@@ -69,7 +70,8 @@ export const DrawIoEmbed = forwardRef<DrawIoEmbedRef, DrawIoEmbedProps>(
               format: exportFormat || 'xmlsvg',
               // @ts-ignore not allowed normally, but only for internal use
               exit: data.exit,
-              parentEvent: 'save'
+              parentEvent: 'save',
+              ...exportOptions
             });
           },
           exit: (data) => {
